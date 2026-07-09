@@ -1,0 +1,47 @@
+print("=" * 50)
+print("      LANGUAGE TRANSLATION TOOL")
+print("=" * 50)
+
+translations = {
+    "hello": "హలో",
+    "good morning": "శుభోదయం",
+    "good evening": "శుభ సాయంత్రం",
+    "good night": "శుభ రాత్రి",
+    "thank you": "ధన్యవాదాలు",
+    "how are you": "మీరు ఎలా ఉన్నారు?",
+    "my name is snehitha": "నా పేరు స్నేహిత"
+}
+
+while True:
+    print("\n========== MENU ==========")
+    print("1. Translate Text")
+    print("2. View Supported Words")
+    print("3. Exit")
+    print("==========================")
+
+    choice = input("Select an option (1-3): ")
+
+    if choice == "1":
+        text = input("\nEnter English Text: ").lower()
+
+        if text in translations:
+            print("\nTranslation Successful")
+            print("---------------------------")
+            print("English :", text.title())
+            print("Telugu  :", translations[text])
+            print("---------------------------")
+        else:
+            print("\nTranslation not available for the entered text.")
+
+    elif choice == "2":
+        print("\nSupported English Words:")
+        for word in translations:
+            print("•", word.title())
+
+    elif choice == "3":
+        print("\nThank you for using the Language Translation Tool.")
+        print("Program Closed Successfully.")
+        break
+
+    else:
+        print("\nInvalid option. Please try again.")
