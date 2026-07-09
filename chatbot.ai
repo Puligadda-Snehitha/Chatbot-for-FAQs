@@ -1,0 +1,15 @@
+faq = {
+    "what is ai": "AI stands for Artificial Intelligence.",
+    "what is python": "Python is a programming language.",
+    "who are you": "I am a simple FAQ chatbot."
+}
+
+print("FAQ Chatbot")
+while True:
+    q = input("You: ").lower()
+
+    if q == "exit":
+        print("Bot: Goodbye!")
+        break
+
+    print("Bot:", faq.get(q, "Sorry, I don't know the answer."))
